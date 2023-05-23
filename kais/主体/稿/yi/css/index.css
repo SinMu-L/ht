@@ -1,0 +1,90 @@
+* {
+  /* 页面初始化，清除元素原有的内外边距 */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  /* 网页背景渐变色 */
+  background: linear-gradient(rgb(50, 50, 224), rgb(95, 252, 247));
+}
+
+body,
+.navbar,
+.navbar ul {
+  display: flex;
+}
+.navbar {
+  position: relative;
+  padding: 20px;
+  border-radius: 50px;
+  /*背景*/
+  background-color: #2752c9;
+}
+.navbar input {
+  /*显示后字体距离*/
+  width: 450px;
+  height: 40px;
+  /* 透明度为0 */
+  opacity: 0;
+  cursor: pointer;
+}
+.navbar span {
+  position: absolute;
+  /*两条距离*/
+  left: 25px;
+  top: calc(60% - 10px);
+  width: 30px;
+  height: 4px;
+  border-radius: 15px;
+  background-color: #999;
+  /* span覆盖着复选框，鼠标放到span上点不中复选框 */
+  pointer-events: none;
+  /* 收回来的时候刚好相反 */
+  transition: transform 0.3s ease-in-out, top 0.3x ease-in-out 0.3s;
+}
+.navbar span:nth-child(3) {
+  top: calc(50% + 6px);
+}
+.navbar ul {
+  width: 0;
+  /* 隐藏溢出的元素 */
+  overflow: hidden;
+  /* 将文字一行显示 */
+  white-space: nowrap;
+  transition: all 0.5s;
+}
+.navbar ul li {
+  list-style: none;
+  margin: 0 15px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  /*字体颜色*/
+  color: #ffffff;
+}
+.navbar ul li a:hover {
+  /*选中后颜色*/
+  color: #cc69f3;
+}
+/* :checked是当复选框选中的时候， */
+.navbar input:checked ~ ul {
+  /*打开后的宽度*/
+  width: 550px;
+}
+.navbar input:checked ~ span:nth-child(2) {
+  top: calc(50% - 2px);
+  transform: rotate(-45deg);
+  background-color: #fb7299;
+  /* 先做top 然后0.3后执行transform */
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}
+.navbar input:checked ~ span:nth-child(3) {
+  top: calc(50% - 2px);
+  transform: rotate(45deg);
+  background-color: #fb7299;
+  transition: top 0.3s ease-in-out, transform 0.3s ease-in-out 0.3s;
+}

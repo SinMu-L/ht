@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<meta charset="UTF-8">
+<title>Sliding Menu</title>
+
+<!--导航栏-->
+<link rel="stylesheet" href="css/style.css">
+<link href="css/bootstrap.min.css" type="text" rel="stylesheet">
+<!--图标-->
+<link rel="shortcut icon" href="img/01699f56434ffe6ac7259e0fe866bf.png">
+<!--返回顶部-->
+<link rel="stylesheet" href="static/css/index.css">
+		<script src="static/js/jquery-1.10.2.js"></script>
+		<script src="static/js/index.js"></script>
+</head>
+
+<body>
+	<div class="rocket-wrapper">
+		<div class="active-rocket"></div>
+		<div class="hover-rocket"></div>
+		<div class="default-rocket"></div>
+	</div>
+
+<nav>
+	<div class="menu-btn">
+		<div class="line line--1"></div>
+		<div class="line line--2"></div>
+		<div class="line line--3"></div>
+	</div>
+
+	<div class="nav-links">
+		<a href="首页.html" class="link">首页</a>
+		<a href="1970.html" class="link">1970</a>
+		<a href="科普与人物.html" class="link">科普与人物</a>
+		<a href="北斗导航系统.html" class="link">北斗导航系统</a>
+	</div>
+</nav>
+
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-12" style="background-color: aquamarine;"> rtykjhgds</div>
+	</div>
+</div>
+
+
+<script  src="js/index.js">
+
+	
+</script>
+
+
+
+
+</body>
+
+
+<script> (function () {
+	var a_idx = 0;
+	window.onclick = function (event) {
+		var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+			"❤敬业❤", "❤诚信❤", "❤友善❤");
+
+		var heart = document.createElement("b"); 
+		heart.onselectstart = new Function('event.returnValue=false'); 
+
+		document.body.appendChild(heart).innerHTML = a[a_idx]; 
+		a_idx = (a_idx + 1) % a.length;
+		heart.style.cssText = "position: fixed;left:-100%;"; 
+
+		var f = 16, 
+			x = event.clientX - f / 2, 
+			y = event.clientY - f, 
+			c = randomColor(), 
+			a = 1, 
+			s = 1.2; 
+
+		var timer = setInterval(function () { 
+			if (a <= 0) {
+				document.body.removeChild(heart);
+				clearInterval(timer);
+			} else {
+				heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+					c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+					s + ");";
+
+				y--;
+				a -= 0.016;
+				s += 0.002;
+			}
+		}, 15)
+
+	}
+	function randomColor() {
+
+		return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+		.random() * 255)) + ")";
+
+	}
+}());</script>
+</html>

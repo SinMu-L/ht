@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>联系我们</title>
+	<meta name="description" content="Neat">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" user-scalable="no">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/style.js"></script>
+	<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<link rel="shortcut icon" href="img/01699f56434ffe6ac7259e0fe866bf.png " >
+</head>
+<body>
+	<div class="container-fluid" style="padding: 0px;">
+		
+	<header class="header">
+		<div class="burger">
+			<div class="burger-patty"></div>
+			<div class="burger-patty"></div>
+			<div class="burger-patty"></div>
+		</div>
+	
+		<nav class="menu">
+			<div class="menu-banner">
+				<a href="javascript:void(0)">
+					<div class="logo">
+						<!--左边图-->
+						<img src="img/R-C (6).jpg" alt="" style="width: 100%; ">
+					</div>
+				</a>
+			</div>
+			<ul class="menu-list">
+				<li class="menu-item" style="--i:0;">
+					<a href="首页.html" style="text-decoration:none;"><h1>首页</h1></a>
+				</li>
+				<li class="menu-item" style="--i:1;">
+					<a href="1970.html" style="text-decoration:none;"><h1>1970</h1></a>
+				</li>
+				<li class="menu-item" style="--i:2;">
+					<a href="北斗导航系统.html" style="text-decoration:none;"><h1>北斗导航系统</h1></a>
+				</li>
+				<li class="menu-item" style="--i:3;">
+					<a href="科普与人物.html" style="text-decoration:none;"><h1>科普与人物</h1></a>
+				</li>
+				<li class="menu-item" style="--i:4;">
+					<a href="航天空域.html" style="text-decoration:none;"><h1>航天空域</h1></a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<div>
+			<h2>
+				
+			</h2>
+			<h3>
+			</h3>
+		</div>
+	</main>
+</div>
+</body>
+<script type="text/javascript">
+	new Action({});
+</script>
+<script>
+	(function () {
+			var a_idx = 0;
+			window.onclick = function (event) {
+				var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+					"❤敬业❤", "❤诚信❤", "❤友善❤");
+  
+				var heart = document.createElement("b"); 
+				heart.onselectstart = new Function('event.returnValue=false'); 
+  
+				document.body.appendChild(heart).innerHTML = a[a_idx]; 
+				a_idx = (a_idx + 1) % a.length;
+				heart.style.cssText = "position: fixed;left:-100%;"; 
+  
+				var f = 16, 
+					x = event.clientX - f / 2, 
+					y = event.clientY - f, 
+					c = randomColor(), 
+					a = 1, 
+					s = 1.2; 
+  
+				var timer = setInterval(function () { 
+					if (a <= 0) {
+						document.body.removeChild(heart);
+						clearInterval(timer);
+					} else {
+						heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+							c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+							s + ");";
+  
+						y--;
+						a -= 0.016;
+						s += 0.002;
+					}
+				}, 15)
+  
+			}
+			function randomColor() {
+  
+				return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+				.random() * 255)) + ")";
+  
+			}
+		}());
+  </script>
+</html>

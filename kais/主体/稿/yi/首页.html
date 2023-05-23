@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>光头强</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" >
+  <link rel="shortcut icon" href="img/01699f56434ffe6ac7259e0fe866bf.png">
+  <link href="js/Untitled-1.js" rel="stylesheet ">
+  <style>
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row" >
+      <div class="col-lg-12"style="width: 1890px;">
+  <div class="navbar">
+    <input type="checkbox" name="" id="" >
+    <span></span>
+    <span></span>
+    <ul>
+      <li><a href="首页.html">首页</a></li>
+      <li><a href="科普与人物.html">科普与人物</a></li>
+      <li><a href="北斗导航系统.html">北斗导航系统</a></li>
+      <li><a href="1970.html">1970</a></li>
+      <li><a href="航天空域.html">航天空域</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+  </div>
+</body>
+<script>
+  (function () {
+          var a_idx = 0;
+          window.onclick = function (event) {
+              var a = new Array("❤富强❤", "❤民主❤", "❤文明❤", "❤和谐❤", "❤自由❤", "❤平等❤", "❤公正❤", "❤法治❤", "❤爱国❤",
+                  "❤敬业❤", "❤诚信❤", "❤友善❤");
+              var heart = document.createElement("b"); 
+              heart.onselectstart = new Function('event.returnValue=false'); 
+              document.body.appendChild(heart).innerHTML = a[a_idx]; 
+              a_idx = (a_idx + 1) % a.length;
+              heart.style.cssText = "position: fixed;left:-100%;"; 
+
+              var f = 16, 
+                  x = event.clientX - f / 2, 
+                  y = event.clientY - f, 
+                  c = randomColor(), 
+                  a = 1, 
+                  s = 1.2; 
+
+              var timer = setInterval(function () { 
+                  if (a <= 0) {
+                      document.body.removeChild(heart);
+                      clearInterval(timer);
+                  } else {
+                      heart.style.cssText = "font-size:16px;cursor: default;position: fixed;color:" +
+                          c + ";left:" + x + "px;top:" + y + "px;opacity:" + a + ";transform:scale(" +
+                          s + ");";
+
+                      y--;
+                      a -= 0.016;
+                      s += 0.002;
+                  }
+              }, 15)
+          }
+          function randomColor() {
+
+              return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math
+              .random() * 255)) + ")";
+
+          }
+      }());
+</script>
+</html>
