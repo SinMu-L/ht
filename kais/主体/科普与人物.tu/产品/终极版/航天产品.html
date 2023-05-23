@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>飞船产品</title>
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="../../../img/导航栏图标/01699f56434ffe6ac7259e0fe866bf.png">
+
+<!--必要样式-->
+<link rel="stylesheet" href="dist/stylesheets/chromagallery.min.css">
+<link href="">
+<style type="text/css">
+body,html
+{
+	height: 100%;
+}
+.content
+{
+	width: 100%;
+	height: 100%;
+	margin: 10px auto;
+}
+@media screen and (min-width: 980px)  {
+  .content {
+	width: 70%;
+  }
+}		
+.mygallery
+{
+	margin: 25px 0;
+}
+/*导航样式*/
+.kk{
+	border-radius: 10px;
+	background-color: aliceblue;
+	color: black;
+	height: 50px;
+	margin: 5px;
+	display: flex; justify-content:center; align-items: center;
+}
+/*导航伪类*/
+.kk:hover{
+	-webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ -webkit-box-shadow: #ffffff 0px 0px 10px;
+ -moz-box-shadow: #ffffff 0px 0px 10px;
+  box-shadow: #ffffff 0px 0px 10px;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+a:hover{
+	text-decoration: none;
+	color: #000000;
+}
+body{
+	background-image: url(img/bgcolor/1.jpg);
+	background-size: 100%;
+}
+</style>
+
+</head>
+<body>
+	<div class="row">
+		<div class="col-lg-4"><a href="../../../科普与人物.html"><img src="img/返回。.png" width="100"></div>
+			<div class="col-lg-1 kk"><a href="航天产品.html">航天产品</a></div>
+		<div class="col-lg-1 kk"><a href="飞船产品.html">飞船产品</a></div>
+		<div class="col-lg-1 kk"><a href="火箭产品.html">火箭产品</a></div>
+		<div class="col-lg-1 kk"><a href="卫星产品.html">卫星产品</a></div>
+		<div class="col-lg-4"></div>
+
+	</div>
+<div class="content">
+	<div class="chroma-gallery mygallery">
+		<img src="img/飞船/实用图/1.jpg" alt="神州号" data-largesrc="img/飞船/实用图/1.jpg"  />
+		<img src="img/飞船/实用图/外面/2.jpg" alt="神州二号" data-largesrc="img/飞船/实用图/2.jpg" />
+		<img src="img/飞船/实用图/外面/3.jpg" alt="神州三号" data-largesrc="img/飞船/实用图/3.jpg" />
+		<img src="img/飞船/实用图/外面/4.jpg" alt="神州四号" data-largesrc="img/飞船/实用图/4.jpg" />
+		<img src="img/飞船/实用图/外面/5.jpg" alt="神州五号" data-largesrc="img/飞船/实用图/5.jpg" />
+		<img src="img/飞船/实用图/6.jpg" alt="神州六号" data-largesrc="img/飞船/实用图/6.jpg" />
+		<img src="img/飞船/实用图/7.jpg" alt="神州七号" data-largesrc="img/飞船/实用图/7.jpg" />
+		<img src="img/飞船/实用图/外面/8.jpg" alt="神州八号" data-largesrc="img/飞船/实用图/8.jpg" />
+		<img src="img/飞船/实用图/9.jpg" alt="神州九号" data-largesrc="img/飞船/实用图/9.jpg" />
+		<img src="img/飞船/实用图/外面/10.jpg" alt="神州十号" data-largesrc="img/飞船/实用图/10.jpg" />
+		<img src="img/飞船/实用图/11.jpg" alt="神州十一号" data-largesrc="img/飞船/实用图/11.jpg" />
+		<img src="img/飞船/实用图/12.jpg" alt="神州十二号" data-largesrc="img/飞船/实用图/12.jpg" />
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="dist/scripts/chromagallery.pkgd.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(".mygallery").chromaGallery
+	({
+		color:'#000',
+		gridMargin:15,
+		maxColumns:5,
+		dof:true,
+		screenOpacity:0.8
+	});
+});
+</script>
+
+</body>
+</html>
