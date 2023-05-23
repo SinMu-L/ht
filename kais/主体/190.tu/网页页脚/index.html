@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="statics/css/style.css" />
+</head>
+
+<body>
+
+
+<!-- 底部 _start-->
+
+<div class="site-footer">
+
+	<div class="footer-related">
+
+		<div class="footer-article w1100">
+			<dl class="contact clearfix">
+				<dt class="fl">
+					<i class="iconfont"></i>
+				</dt>
+				<dd class="fl">
+					<p class="text">售前咨询热线</p>
+					<p class="tel">19123910193</p>
+					<a href="#" >在线咨询</a>
+				</dd>
+			</dl>
+
+			<dl class="col-article">
+				<dt>电商产品</dt>
+
+				<dd>
+					<a  href="#">云小店</a>
+				</dd>
+
+				<dd>
+					<a  href="#">品牌商城</a>
+				</dd>
+
+				<dd>
+					<a  href="#">商户商城</a>
+				</dd>
+
+				<dd>
+					<a  href="#">批发商城</a>
+				</dd>
+
+				<dd>
+					<a  href="#">招商加盟商城</a>
+				</dd>
+
+				<dd>
+					<a  href="#">同城电商平台</a>
+				</dd>
+
+			</dl>
+
+			<dl class="col-article">
+				<dt>行业方案</dt>
+
+				<dd>
+					<a  href="#">新零售</a>
+				</dd>
+
+				<dd>
+					<a  href="#">O2O</a>
+				</dd>
+
+				<dd>
+					<a  href="#">实体商超</a>
+				</dd>
+
+				<dd>
+					<a  href="#">多供应商</a>
+				</dd>
+
+				<dd>
+					<a  href="#">百货商场</a>
+				</dd>
+
+				<dd>
+					<a  href="#">农村电商</a>
+				</dd>
+
+			</dl>
+
+			<dl class="col-article">
+				<dt>帮助中心</dt>
+
+				<dd>
+					<a  href="#">新手运营手册</a>
+				</dd>
+
+				<dd>
+					<a  href="#">视频教程</a>
+				</dd>
+
+				<dd>
+					<a  href="#">云商城</a>
+				</dd>
+
+				<dd>
+					<a  href="#">云物流</a>
+				</dd>
+
+				<dd>
+					<a  href="#">更新日志</a>
+				</dd>
+
+				<dd>
+					<a  href="#">商学院</a>
+				</dd>
+
+			</dl>
+
+			<!--关于我们-->
+			<dl class="col-article">
+				<dt>关于我们</dt>
+
+				<dd>
+					<a href="#">公司简介</a>
+				</dd>
+
+				<dd>
+					<a href="#">服务市场</a>
+				</dd>
+
+				<dd>
+					<a href="#">客户案例</a>
+				</dd>
+
+				<dd>
+					<a href="#">代理合作</a>
+				</dd>
+
+				<dd>
+					<a href="#">投诉建议</a>
+				</dd>
+
+				<dd>
+					<a href="#">站点地图</a>
+				</dd>
+
+			</dl>
+			<!--关注商之云-->
+			<dl class="wx">
+				<dt>关注商之云</dt>
+
+				<dd>
+					<img src="statics/images/erweima.png">
+				</dd>
+
+				<dd class="other">
+					<span>分公司：</span>
+					<a href="#" >北京</a>
+					<a href="#" >上海</a>
+					<a href="#" >杭州</a>
+					<a href="#" >深圳</a>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="footer-links w1100">
+			<p>友情链接：</p>
+			<div class="clearfix">
+				<!-- 友情链接循环开始 -->
+
+				<a href="#">站点列表</a>
+
+				<a href="#">云商城</a>
+
+				<a href="#">云产品库</a>
+
+				<a href="#">收银狗</a>
+
+				<a href="#">神码收银</a>
+
+				<a href="#">云物流</a>
+
+				<a href="#">云ERP</a>
+
+				<a href="#">生鲜电商</a>
+
+				<a href="#">农村电商</a>
+
+				<a href="#">母婴电商</a>
+
+				<a href="#">电商学院</a>
+
+				<a href="#">shop</a>
+
+				<a href="#">云电脑</a>
+
+				<a href="#">106短信平台</a>
+
+				<a href="#">网站收录</a>
+
+				<a href="#">分类目录</a>
+
+				<!-- 友情链接循环结束 -->
+			</div>
+		</div>
+
+		<div class="footer-info w1100">
+			<div class="info-text w1100">
+				<p class="copyright">
+					中国特色社会主义项目组(www.17sucai.com) 版权所有 <em></em>
+					<a href="#" >浙ICP备xxxxxxxx号</a>
+				</p>
+				<p class="company-info">浙江省秦皇岛人民路xxx号楼3层　</p>
+				<p class="qualified">
+
+				</p>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!--手机验证消息-->
+<div class="validInfo"></div>
+<!-- 底部 _start-->
+
+
+<script type="text/javascript">
+	// 手机号注册
+	var reg = /^1[34578]\d{9}$/;
+	$('body').on('click', '#jump', function() {
+		var mobile = $('.register-phone').val();
+		if(!reg.test($.trim(mobile))) {
+			$('.validInfo').show().text("请正确填写你的手机号");
+			$("#contact_mobile").focus();
+			setTimeout(function() {
+				$('.validInfo').hide()
+			}, 2500)
+			return;
+		}
+	});
+</script>
+
+</body>
+
+</html>
